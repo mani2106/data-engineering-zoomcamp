@@ -19,6 +19,7 @@ Which tag has the following text? - *Write the image ID to the file*
 - `--idimage string`
 - `--idfile string`
 
+### Answer: `--iidfile`
 
 ## Question 2. Understanding docker first run 
 
@@ -30,6 +31,8 @@ How many python packages/modules are installed?
 - 6
 - 3
 - 7
+
+### Answer: 3 (pip, setuptools and wheel)
 
 # Prepare Postgres
 
