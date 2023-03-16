@@ -61,6 +61,8 @@ Remember that `lpep_pickup_datetime` and `lpep_dropoff_datetime` columns are in 
 - 17630
 - 21090
 
+### Answer (2) **20530** with query `select count(*) from green_taxi_data where lpep_pickup_datetime>= '2019-01-15 00:00:00' and lpep_dropoff_datetime < '2019-01-16 00:00:00'`
+
 ## Question 4. Largest trip for each day
 
 Which was the day with the largest trip distance
@@ -71,6 +73,8 @@ Use the pick up time for your calculations.
 - 2019-01-15
 - 2019-01-10
 
+### Answer (3) **2019-01-15 19:27:58** with query `select lpep_pickup_datetime from green_taxi_data where trip_distance = (select max(trip_distance) from green_taxi_data)`
+
 ## Question 5. The number of passengers
 
 In 2019-01-01 how many trips had 2 and 3 passengers?
@@ -80,6 +84,7 @@ In 2019-01-01 how many trips had 2 and 3 passengers?
 - 2: 1282 ; 3: 254
 - 2: 1282 ; 3: 274
 
+### Answer (3) 1282 trips with two passengers and 254 trips with 3 passengers Query: `select count(*) from green_taxi_data where passenger_count = 2(3) and date(lpep_pickup_datetime)= '2019-01-01'`
 
 ## Question 6. Largest tip
 
@@ -93,6 +98,7 @@ Note: it's not a typo, it's `tip` , not `trip`
 - South Ozone Park
 - Long Island City/Queens Plaza
 
+### Answer (4): Long Island City/Queens Plaza
 
 ## Submitting the solutions
 
